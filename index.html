@@ -19,6 +19,10 @@
 
 * { box-sizing: border-box; }
 
+html, body {
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   font-family: Inter, sans-serif;
@@ -67,7 +71,7 @@ nav {
 /* HERO */
 .hero {
   text-align: center;
-  margin: 28px auto 28px;
+  margin: 28px auto;
   max-width: 760px;
 }
 
@@ -112,6 +116,8 @@ nav {
   margin: 0 auto;
   padding: 0 20px 24px;
   overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .timeline {
@@ -189,7 +195,6 @@ nav {
   line-height: 1.35;
 }
 
-/* highlight current role */
 .current .icon {
   box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
 }
@@ -253,12 +258,28 @@ nav {
   color: var(--muted);
 }
 
-/* MOBILE – spacing-safe */
+/* MOBILE REFINEMENTS */
 @media (max-width: 768px) {
+
+  body {
+    min-height: auto;
+    overflow-x: hidden;
+  }
+
   .nav-inner {
     flex-direction: column;
     height: auto;
     padding: 10px;
+  }
+
+  /* swipe hint */
+  .timeline-wrapper::after {
+    content: "← swipe timeline →";
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
   }
 }
 </style>
@@ -284,7 +305,7 @@ nav {
   <h1>Alok Sharma</h1>
   <h2>Senior Data Analyst</h2>
   <p class="summary">
-    Data Analyst with 7+ years of experience turning product, marketing, and business data into actionable insights across high-growth startups.
+    Data Analyst with 6+ years of experience turning product, marketing, and business data into actionable insights across high-growth startups.
   </p>
 </section>
 
