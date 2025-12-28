@@ -144,10 +144,35 @@
       margin-bottom: 10px;
     }
 
+    /* ===== Mobile nav fix ONLY ===== */
     @media (max-width: 768px) {
-      header h1 { font-size: 32px; }
-      .grid { grid-template-columns: 1fr; }
+
+    .nav-inner {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 12px;
+        gap: 8px;
     }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        margin-left: 0;           /* remove desktop spacing */
+        padding-bottom: 2px;      /* tighten underline */
+        font-size: 13px;
+    }
+
+    .nav-links a.active {
+        border-bottom-width: 2px;
+    }
+    }
+
   </style>
 </head>
 
