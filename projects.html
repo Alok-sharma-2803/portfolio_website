@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Alok Sharma</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --text: #0f172a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248,250,252,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      font-weight: 500;
+      color: var(--muted);
+      padding-bottom: 6px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-links a.active {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      font-weight: 600;
+    }
+
+    /* HEADER */
+    header {
+      padding: 72px 0 40px;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* PROJECTS */
+    section {
+      padding: 40px 0;
+    }
+
+    .project {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+
+    .project h2 {
+      margin-top: 0;
+      font-size: 26px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .placeholder {
+      border: 2px dashed #cbd5f5;
+      background: #eef2ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6366f1;
+      font-weight: 600;
+      height: 220px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 32px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <strong>Alok Sharma</strong>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container">
+  <h1>Projects</h1>
+  <p>
+    A selection of high-impact analytics initiatives where I focused on
+    solving real business problems through data, clarity, and scalable design.
+  </p>
+</header>
+
+<section class="container">
+
+  <!-- PROJECT 1 -->
+  <div class="project">
+    <h2>Sales Performance Storyboarding</h2>
+    <div class="meta">Sprinklr · Power BI, SQL</div>
+
+    <div class="tags">
+      <span>Power BI</span>
+      <span>SQL</span>
+      <span>Executive Dashboards</span>
+    </div>
+
+    <div class="grid">
+      <div>
+        <strong>Problem</strong>
+        <ul>
+          <li>Sales leadership relied on 10+ fragmented dashboards</li>
+          <li>Low adoption and inconsistent KPI interpretation</li>
+        </ul>
+
+        <strong>Approach</strong>
+        <ul>
+          <li>Designed a single Power BI storyboard with guided navigation</li>
+          <li>Standardized core Sales and Finance KPIs</li>
+          <li>Optimized data models for performance</li>
+        </ul>
+
+        <strong>Impact</strong>
+        <ul>
+          <li><strong>41%</strong> increase in cross-functional dashboard adoption</li>
+          <li>Faster QBRs and planning discussions</li>
+        </ul>
+      </div>
+
+      <div class="placeholder">
+        Dashboard Screenshot
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project">
+    <h2>Margin Accuracy Optimization</h2>
+    <div class="meta">Udaan · SQL, Python</div>
+
+    <div class="tags">
+      <span>SQL</span>
+      <span>Python</span>
+      <span>Finance Analytics</span>
+    </div>
+
+    <div class="grid">
+      <div>
+        <strong>Problem</strong>
+        <ul>
+          <li>Inconsistent margin calculations across reports</li>
+          <li>Low confidence in financial metrics</li>
+        </ul>
+
+        <strong>Approach</strong>
+        <ul>
+          <li>Performed root-cause analysis on data pipelines</li>
+          <li>Improved calculation logic and validation checks</li>
+        </ul>
+
+        <strong>Impact</strong>
+        <ul>
+          <li><strong>3.2%</strong> improvement in margin accuracy</li>
+          <li>Improved stakeholder trust in reporting</li>
+        </ul>
+      </div>
+
+      <div class="placeholder">
+        Data Flow / Logic
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project">
+    <h2>Lead Conversion & Marketing Analytics</h2>
+    <div class="meta">Vedantu · SQL, Python</div>
+
+    <div class="tags">
+      <span>Clustering</span>
+      <span>Marketing Analytics</span>
+      <span>SQL</span>
+    </div>
+
+    <div class="grid">
+      <div>
+        <strong>Problem</strong>
+        <ul>
+          <li>Low lead conversion and high churn</li>
+          <li>Uniform messaging across diverse user segments</li>
+        </ul>
+
+        <strong>Approach</strong>
+        <ul>
+          <li>Applied clustering on behavioral and engagement data</li>
+          <li>Enabled targeted campaign strategies</li>
+        </ul>
+
+        <strong>Impact</strong>
+        <ul>
+          <li><strong>12%</strong> lift in lead conversion</li>
+          <li>Higher CTR and reduced uninstalls</li>
+        </ul>
+      </div>
+
+      <div class="placeholder">
+        Analysis / Charts
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alok Sharma | Senior Data Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2563eb;
+  --text: #0f172a;
+  --muted: #475569;
+  --bg: #f8fafc;
+  --border: #e5e7eb;
+  --connector: #cbd5e1;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(248,250,252,0.95);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+.nav-links a {
+  margin-left: 24px;
+  font-weight: 500;
+  color: var(--muted);
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+.nav-links a.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.home {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+.content { padding-top: 32px; }
+.hero {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px dashed #cbd5f5;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-weight: 600;
+  color: #6366f1;
+}
+.hero h1 { font-size: 42px; margin: 0; }
+.hero h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--muted);
+  margin: 6px 0 12px;
+}
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 20px;
+  color: var(--muted);
+}
+.cta { margin-bottom: 32px; }
+.cta a {
+  margin: 0 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+.cta a.primary {
+  background: var(--primary);
+  color: white;
+}
+.timeline-wrapper {
+  max-width: 1100px;
+  margin: 0 auto 72px;
+  padding: 0 24px;
+}
+.timeline {
+  position: relative;
+  height: 330px;
+}
+/* current role highlight */
+.current .icon {
+  box-shadow: 0 0 0 5px rgba(37,99,235,0.12);
+}
+
+.current .label {
+  font-weight: 600;
+  position: relative;
+}
+
+.current .label::after {
+  content: "";
+  display: block;
+  margin: 4px auto 0;
+  width: 28px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+/* timeline hover micro-interactions */
+.event {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event:hover {
+  transform: translateX(-50%) translateY(-6px);
+}
+
+.event:hover .icon {
+  transform: scale(1.05);
+}
+
+.icon {
+  transition: transform 0.25s ease;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 170px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--border);
+}
+.tick {
+  position: absolute;
+  top: 162px;
+  width: 2px;
+  height: 16px;
+  background: var(--muted);
+  transform: translateX(-50%);
+}
+.year-label {
+  position: absolute;
+  top: 185px;
+  font-size: 11px;
+  color: var(--muted);
+  transform: translateX(-50%);
+}
+.connector {
+  position: absolute;
+  width: 2px;
+  background: var(--connector);
+  transform: translateX(-50%);
+}
+.event {
+  position: absolute;
+  width: 180px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+/* ABOVE and BELOW use symmetric spacing */
+.event.above {
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event.below {
+  top: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.up { top: 145px; height: 25px; }
+.down { top: 170px; height: 45px; }
+.icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+}
+.label {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.x1994 { left: 2%; }
+.x2017 { left: 20%; }
+.x2018 { left: 26%; }
+.x2020 { left: 36%; }
+.x2021 { left: 44%; }
+.x2024 { left: 56%; }
+.x2025 { left: 62%; }
+.x2026 { left: 68%; }
+.x2027 { left: 74%; }
+.x2028 { left: 82%; }
+footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  background: #ffffff;
+  padding: 24px 0;
+}
+.footer-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.skill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 13px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+
+  .timeline {
+    height: auto;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    top: 0;
+    left: 16px;
+    width: 2px;
+    height: 100%;
+  }
+
+  .tick,
+  .year-label {
+    display: none;
+  }
+
+  .event {
+    position: relative;
+    left: 0 !important;
+    transform: none !important;
+    width: auto;
+    text-align: left;
+    margin: 32px 0;
+  }
+
+  .event::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  .connector {
+    display: none;
+  }
+}
+
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <strong>Alok Sharma</strong>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+<section class="home">
+<div class="content">
+<div class="hero">
+  <div class="profile-img">Photo</div>
+  <h1>Alok Sharma</h1>
+  <h2>Senior Data Analyst</h2>
+  <p>Turning complex data into clear, trusted business decisions.</p>
+  <div class="cta">
+    <a class="primary" href="#">Resume</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+</div>
+<div class="timeline-wrapper">
+<div class="timeline">
+<div class="tick x1994"></div><div class="year-label x1994">1994</div>
+<div class="tick x2017"></div><div class="year-label x2017">2017</div>
+<div class="tick x2018"></div><div class="year-label x2018">2018</div>
+<div class="tick x2020"></div><div class="year-label x2020">2020</div>
+<div class="tick x2021"></div><div class="year-label x2021">2021</div>
+<div class="tick x2024"></div><div class="year-label x2024">2024</div>
+<div class="tick x2025"></div><div class="year-label x2025">2025</div>
+<div class="tick x2026"></div><div class="year-label x2026">2026</div>
+<div class="tick x2027"></div><div class="year-label x2027">2027</div>
+<div class="tick x2028"></div><div class="year-label x2028">2028</div>
+<div class="connector up x1994"></div>
+<div class="event above x1994"><div class="label">Born</div><div class="icon">👶</div></div>
+<div class="connector down x2017"></div>
+<div class="event below x2017"><div class="icon">🎓</div><div class="label">Bachelor’s Degree</div></div>
+<div class="connector up x2018"></div>
+<div class="event above x2018"><div class="label">Analytics Training</div><div class="icon">📊</div></div>
+<div class="connector down x2020"></div>
+<div class="event below x2020"><div class="icon">1️⃣</div><div class="label">Marketing Analyst<br/>Cure.fit</div></div>
+<div class="connector up x2021"></div>
+<div class="event above x2021"><div class="label">Data Analyst<br/>Vedantu</div><div class="icon">2️⃣</div></div>
+<div class="connector down x2024"></div>
+<div class="event below x2024 current"><div class="icon">3️⃣</div><div class="label">Senior Data Analyst<br/>Sprinklr (2024–Present)</div></div>
+<div class="connector up x2027"></div>
+<div class="event above x2027"><div class="label">MS in Analytics<br/>(2025–2027, Expected)</div><div class="icon">🎓</div></div>
+</div>
+</div>
+</div>
+<footer>
+  <div class="footer-skills">
+    <div class="skill">SQL</div>
+    <div class="skill">Python</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Snowflake</div>
+    <div class="skill">Analytics Storytelling</div>
+    <div class="skill">KPI Design</div>
+  </div>
+</footer>
+</section>
+</body>
+</html>

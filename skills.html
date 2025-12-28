@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Alok Sharma</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --text: #0f172a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248,250,252,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      font-weight: 500;
+      color: var(--muted);
+      padding-bottom: 6px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-links a.active {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      font-weight: 600;
+    }
+
+    /* HEADER */
+    header {
+      padding: 72px 0 40px;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* SKILLS */
+    section {
+      padding: 32px 0;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .skill-card h2 {
+      margin-top: 0;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 13px;
+      margin: 6px 6px 0 0;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <strong>Alok Sharma</strong>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container">
+  <h1>Skills</h1>
+  <p>
+    A practical overview of the tools and capabilities I use to design,
+    build, and scale analytics solutions.
+  </p>
+</header>
+
+<section class="container">
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h2>Data & Querying</h2>
+      <p>
+        Strong foundation in extracting, validating, and transforming data
+        across large, production-grade datasets.
+      </p>
+      <span class="pill">SQL (Advanced)</span>
+      <span class="pill">Snowflake</span>
+      <span class="pill">Data Modeling</span>
+      <span class="pill">CTEs & Window Functions</span>
+    </div>
+
+    <div class="skill-card">
+      <h2>Analytics & Programming</h2>
+      <p>
+        Applying Python for analysis, automation, and statistical exploration
+        in real business contexts.
+      </p>
+      <span class="pill">Python</span>
+      <span class="pill">Pandas</span>
+      <span class="pill">NumPy</span>
+      <span class="pill">EDA</span>
+      <span class="pill">Clustering</span>
+    </div>
+
+    <div class="skill-card">
+      <h2>BI & Visualization</h2>
+      <p>
+        Designing dashboards that guide decision-making rather than overwhelm users.
+      </p>
+      <span class="pill">Power BI</span>
+      <span class="pill">DAX</span>
+      <span class="pill">Tableau</span>
+      <span class="pill">Executive Storyboards</span>
+    </div>
+
+    <div class="skill-card">
+      <h2>Business Analytics</h2>
+      <p>
+        Translating business problems into measurable analytics frameworks.
+      </p>
+      <span class="pill">KPI Design</span>
+      <span class="pill">Root Cause Analysis</span>
+      <span class="pill">Finance Analytics</span>
+      <span class="pill">Sales & Marketing Analytics</span>
+    </div>
+
+    <div class="skill-card">
+      <h2>Data Engineering Awareness</h2>
+      <p>
+        Collaborating closely with engineering teams to ensure analytics reliability.
+      </p>
+      <span class="pill">Data Pipelines</span>
+      <span class="pill">Data Validation</span>
+      <span class="pill">Performance Optimization</span>
+    </div>
+
+    <div class="skill-card">
+      <h2>Ways of Working</h2>
+      <p>
+        How I approach analytics problems and collaborate with stakeholders.
+      </p>
+      <span class="pill">Stakeholder Management</span>
+      <span class="pill">Analytics Storyboarding</span>
+      <span class="pill">Documentation</span>
+      <span class="pill">Mentoring</span>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

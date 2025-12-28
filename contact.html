@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Alok Sharma</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --text: #0f172a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248,250,252,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      font-weight: 500;
+      color: var(--muted);
+      padding-bottom: 6px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-links a.active {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      font-weight: 600;
+    }
+
+    /* HEADER */
+    header {
+      padding: 72px 0 32px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* CONTACT */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-item {
+      margin-bottom: 24px;
+    }
+
+    .contact-item span {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .contact-item a {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .cta {
+      margin-top: 32px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--primary);
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .cta a.primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 32px; }
+      .contact-card { padding: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <strong>Alok Sharma</strong>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container">
+  <h1>Get in Touch</h1>
+  <p>
+    Interested in collaborating, hiring, or discussing analytics work?
+    I’m always open to meaningful conversations.
+  </p>
+</header>
+
+<section class="container">
+  <div class="contact-card">
+
+    <div class="contact-item">
+      <span>Email</span>
+      <a href="mailto:aloksharma2803@gmail.com">aloksharma2803@gmail.com</a>
+    </div>
+
+    <div class="contact-item">
+      <span>LinkedIn</span>
+      <a href="https://linkedin.com" target="_blank">linkedin.com/in/aloksharma</a>
+    </div>
+
+    <div class="contact-item">
+      <span>Location</span>
+      <strong>Bengaluru, India</strong>
+    </div>
+
+    <div class="cta">
+      <a class="primary" href="mailto:aloksharma2803@gmail.com">Email Me</a>
+      <a href="#">Download Resume</a>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
