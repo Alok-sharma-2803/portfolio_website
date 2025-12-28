@@ -42,20 +42,21 @@ nav {
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 60px;
 }
 
 .nav-links a {
-  margin-left: 24px;
+  margin-left: 20px;
   font-weight: 500;
   color: var(--muted);
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   border-bottom: 2px solid transparent;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .nav-links a.active {
@@ -66,54 +67,63 @@ nav {
 /* HERO */
 .hero {
   text-align: center;
-  margin: 48px auto 56px;
-  max-width: 800px;
+  margin: 28px auto 28px;
+  max-width: 760px;
 }
 
 .profile-img {
-  width: 110px;
-  height: 110px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   border: 2px dashed #cbd5f5;
   background: #eef2ff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  margin: 0 auto 12px;
   font-weight: 600;
   color: #6366f1;
+  font-size: 13px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 36px;
   margin: 0;
 }
 
 .hero h2 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--muted);
-  margin: 6px 0 12px;
+  margin: 4px 0 8px;
+}
+
+.summary {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 14px;
+  line-height: 1.55;
 }
 
 /* TIMELINE */
 .timeline-wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px 48px;
+  padding: 0 20px 24px;
   overflow-x: auto;
 }
 
 .timeline {
   position: relative;
   min-width: 1000px;
-  height: 320px;
+  height: 260px;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  top: 165px;
+  top: 135px;
   left: 0;
   right: 0;
   height: 2px;
@@ -123,16 +133,16 @@ nav {
 /* ticks */
 .tick {
   position: absolute;
-  top: 157px;
+  top: 128px;
   width: 2px;
-  height: 16px;
+  height: 14px;
   background: var(--muted);
   transform: translateX(-50%);
 }
 
 .year {
   position: absolute;
-  top: 180px;
+  top: 148px;
   font-size: 11px;
   color: var(--muted);
   transform: translateX(-50%);
@@ -146,42 +156,42 @@ nav {
   transform: translateX(-50%);
 }
 
-.up { top: 140px; height: 25px; }
-.down { top: 165px; height: 45px; }
+.up { top: 112px; height: 22px; }
+.down { top: 135px; height: 38px; }
 
 /* events */
 .event {
   position: absolute;
-  width: 180px;
+  width: 170px;
   text-align: center;
   transform: translateX(-50%);
 }
 
-.above { top: 55px; }
-.below { top: 225px; }
+.above { top: 28px; }
+.below { top: 188px; }
 
 .icon {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--primary);
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 6px auto;
+  margin: 5px auto;
 }
 
 .label {
   font-size: 12px;
   color: var(--muted);
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 /* highlight current role */
 .current .icon {
-  box-shadow: 0 0 0 5px rgba(37,99,235,0.15);
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
 }
 
 /* x-axis positions */
@@ -198,57 +208,57 @@ nav {
 .site-footer {
   background: #ffffff;
   border-top: 1px solid var(--border);
-  padding: 36px 16px;
+  padding: 20px 16px;
   margin-top: auto;
 }
 
 .footer-inner {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
 
 .footer-top strong {
   display: block;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .footer-top span {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
 }
 
 .footer-skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  max-width: 720px;
-  margin: 22px auto 26px;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+  max-width: 680px;
+  margin: 14px auto 16px;
 }
 
 .skill-card {
-  padding: 10px 12px;
+  padding: 8px 10px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text);
   background: #f8fafc;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .footer-bottom {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
 }
 
-/* MOBILE – safe */
+/* MOBILE – spacing-safe */
 @media (max-width: 768px) {
   .nav-inner {
     flex-direction: column;
     height: auto;
-    padding: 12px;
+    padding: 10px;
   }
 }
 </style>
@@ -273,6 +283,9 @@ nav {
   <div class="profile-img">Photo</div>
   <h1>Alok Sharma</h1>
   <h2>Senior Data Analyst</h2>
+  <p class="summary">
+    Data Analyst with 7+ years of experience turning product, marketing, and business data into actionable insights across high-growth startups.
+  </p>
 </section>
 
 <section class="timeline-wrapper">
