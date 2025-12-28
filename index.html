@@ -24,15 +24,19 @@ body {
   font-family: Inter, sans-serif;
   background: var(--bg);
   color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* NAV */
 nav {
   position: sticky;
   top: 0;
-  z-index: 10;
   background: rgba(248,250,252,0.95);
   border-bottom: 1px solid var(--border);
+  z-index: 10;
 }
 
 .nav-inner {
@@ -59,19 +63,11 @@ nav {
   border-color: var(--primary);
 }
 
-/* PAGE */
-.home {
-  min-height: calc(100vh - 64px);
-  display: flex;
-  flex-direction: column;
-}
-
-.content { padding-top: 32px; }
-
 /* HERO */
 .hero {
   text-align: center;
-  margin-bottom: 56px;
+  margin: 48px auto 56px;
+  max-width: 800px;
 }
 
 .profile-img {
@@ -100,68 +96,43 @@ nav {
   margin: 6px 0 12px;
 }
 
-.hero p {
-  max-width: 720px;
-  margin: 0 auto 20px;
-  color: var(--muted);
-}
-
-/* CTA */
-.cta { margin-bottom: 32px; }
-
-.cta a {
-  margin: 0 6px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--primary);
-  font-weight: 600;
-  color: var(--primary);
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-.cta a:hover { transform: translateY(-2px); }
-
-.cta a.primary {
-  background: var(--primary);
-  color: white;
-}
-
 /* TIMELINE */
 .timeline-wrapper {
   max-width: 1100px;
-  margin: 0 auto 72px;
-  padding: 0 24px 40px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  overflow-x: auto;
 }
 
 .timeline {
   position: relative;
-  height: 330px;
+  min-width: 1000px;
+  height: 320px;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  top: 170px;
+  top: 165px;
   left: 0;
   right: 0;
   height: 2px;
   background: var(--border);
 }
 
-/* year ticks */
+/* ticks */
 .tick {
   position: absolute;
-  top: 162px;
+  top: 157px;
   width: 2px;
   height: 16px;
   background: var(--muted);
   transform: translateX(-50%);
 }
 
-.year-label {
+.year {
   position: absolute;
-  top: 185px;
+  top: 180px;
   font-size: 11px;
   color: var(--muted);
   transform: translateX(-50%);
@@ -175,8 +146,8 @@ nav {
   transform: translateX(-50%);
 }
 
-.up { top: 145px; height: 25px; }
-.down { top: 170px; height: 45px; }
+.up { top: 140px; height: 25px; }
+.down { top: 165px; height: 45px; }
 
 /* events */
 .event {
@@ -184,42 +155,23 @@ nav {
   width: 180px;
   text-align: center;
   transform: translateX(-50%);
-  transition: transform 0.25s ease;
 }
 
-.event:hover {
-  transform: translateX(-50%) translateY(-6px);
-}
-
-.event.above {
-  top: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.event.below {
-  top: 230px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.above { top: 55px; }
+.below { top: 225px; }
 
 .icon {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   background: var(--primary);
-  color: white;
+  color: #fff;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 6px 0;
-  transition: transform 0.25s ease;
+  margin: 6px auto;
 }
-
-.event:hover .icon { transform: scale(1.05); }
 
 .label {
   font-size: 12px;
@@ -227,118 +179,76 @@ nav {
   line-height: 1.4;
 }
 
-/* current role highlight */
+/* highlight current role */
 .current .icon {
   box-shadow: 0 0 0 5px rgba(37,99,235,0.15);
 }
 
-.current .label {
-  font-weight: 600;
-  color: var(--text);
-}
-
-/* horizontal positions */
-.x1994 { left: 2%; }
-.x2017 { left: 20%; }
-.x2018 { left: 26%; }
-.x2020 { left: 36%; }
-.x2021 { left: 44%; }
-.x2024 { left: 56%; }
-.x2025 { left: 62%; }
-.x2026 { left: 68%; }
-.x2027 { left: 74%; }
-.x2028 { left: 82%; }
+/* x-axis positions */
+.x1994  { left: 5%; }
+.x2017  { left: 25%; }
+.x20175 { left: 32%; }
+.x2018  { left: 39%; }
+.x2020  { left: 50%; }
+.x2021  { left: 58%; }
+.x2024  { left: 70%; }
+.x2027  { left: 85%; }
 
 /* FOOTER */
-footer {
-  margin-top: auto;
-  border-top: 1px solid var(--border);
+.site-footer {
   background: #ffffff;
-  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  padding: 36px 16px;
+  margin-top: auto;
 }
 
-.footer-skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.skill {
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg);
+.footer-top strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.footer-top span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  max-width: 720px;
+  margin: 22px auto 26px;
+}
+
+.skill-card {
+  padding: 10px 12px;
+  text-align: center;
   font-size: 13px;
   font-weight: 500;
+  color: var(--text);
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
 
-/* MOBILE FIXES */
-@media (max-width: 768px) {
+.footer-bottom {
+  font-size: 12px;
+  color: var(--muted);
+}
 
-  /* nav */
+/* MOBILE – safe */
+@media (max-width: 768px) {
   .nav-inner {
     flex-direction: column;
     height: auto;
-    padding: 12px 16px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 8px;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    font-size: 14px;
-  }
-
-  /* timeline -> vertical */
-  .timeline {
-    height: auto;
-    padding-left: 32px;
-    margin-bottom: 48px;
-  }
-
-  .timeline::before {
-    top: 0;
-    left: 16px;
-    width: 2px;
-    height: 100%;
-  }
-
-  .tick,
-  .year-label,
-  .connector {
-    display: none;
-  }
-
-  .event {
-    position: relative;
-    left: 0 !important;
-    transform: none !important;
-    width: auto;
-    margin: 32px 0;
-    padding-left: 32px;
-    text-align: left;
-  }
-
-  .event::before {
-    content: "";
-    position: absolute;
-    left: -22px;
-    top: 10px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--primary);
-  }
-
-  footer {
-    margin-top: 32px;
+    padding: 12px;
   }
 }
 </style>
@@ -350,7 +260,7 @@ footer {
   <div class="nav-inner">
     <strong>Alok Sharma</strong>
     <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
+      <a class="active">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="skills.html">Skills</a>
@@ -359,95 +269,88 @@ footer {
   </div>
 </nav>
 
-<section class="home">
-<div class="content">
-
-<div class="hero">
+<section class="hero">
   <div class="profile-img">Photo</div>
   <h1>Alok Sharma</h1>
   <h2>Senior Data Analyst</h2>
-  <p>Turning complex data into clear, trusted business decisions.</p>
-  <div class="cta">
-    <a class="primary" href="#">Resume</a>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-  </div>
-</div>
+</section>
 
-<div class="timeline-wrapper">
+<section class="timeline-wrapper">
 <div class="timeline">
 
-<!-- year ticks -->
-<div class="tick x1994"></div><div class="year-label x1994">1994</div>
-<div class="tick x2017"></div><div class="year-label x2017">2017</div>
-<div class="tick x2018"></div><div class="year-label x2018">2018</div>
-<div class="tick x2020"></div><div class="year-label x2020">2020</div>
-<div class="tick x2021"></div><div class="year-label x2021">2021</div>
-<div class="tick x2024"></div><div class="year-label x2024">2024</div>
-<div class="tick x2025"></div><div class="year-label x2025">2025</div>
-<div class="tick x2026"></div><div class="year-label x2026">2026</div>
-<div class="tick x2027"></div><div class="year-label x2027">2027</div>
-<div class="tick x2028"></div><div class="year-label x2028">2028</div>
+  <div class="tick x1994"></div><div class="year x1994">1994</div>
+  <div class="tick x2017"></div><div class="year x2017">2017</div>
+  <div class="tick x2018"></div><div class="year x2018">2018</div>
+  <div class="tick x2020"></div><div class="year x2020">2020</div>
+  <div class="tick x2021"></div><div class="year x2021">2021</div>
+  <div class="tick x2024"></div><div class="year x2024">2024</div>
+  <div class="tick x2027"></div><div class="year x2027">2027</div>
 
-<!-- events -->
-<div class="connector up x1994"></div>
-<div class="event above x1994">
-  <div class="label">Born</div>
-  <div class="icon">👶</div>
-</div>
+  <div class="connector up x1994"></div>
+  <div class="event above x1994">
+    <div class="label">Born</div><div class="icon">👶</div>
+  </div>
 
-<div class="connector down x2017"></div>
-<div class="event below x2017">
-  <div class="icon">🎓</div>
-  <div class="label">Bachelor’s Degree</div>
-</div>
+  <div class="connector down x2017"></div>
+  <div class="event below x2017">
+    <div class="icon">🎓</div><div class="label">B.Tech</div>
+  </div>
 
-<div class="connector up x2018"></div>
-<div class="event above x2018">
-  <div class="label">Analytics Training</div>
-  <div class="icon">📊</div>
-</div>
+  <div class="connector up x20175"></div>
+  <div class="event above x20175">
+    <div class="label">Analytics Training</div><div class="icon">📊</div>
+  </div>
 
-<div class="connector down x2020"></div>
-<div class="event below x2020">
-  <div class="icon">1️⃣</div>
-  <div class="label">Marketing Analyst<br/>Cure.fit</div>
-</div>
+  <div class="connector down x2018"></div>
+  <div class="event below x2018">
+    <div class="icon">1️⃣</div><div class="label">Marketing Analyst<br/>Cure.Fit</div>
+  </div>
 
-<div class="connector up x2021"></div>
-<div class="event above x2021">
-  <div class="label">Data Analyst<br/>Vedantu</div>
-  <div class="icon">2️⃣</div>
-</div>
+  <div class="connector up x2020"></div>
+  <div class="event above x2020">
+    <div class="label">Data Analyst<br/>Vedantu</div><div class="icon">2️⃣</div>
+  </div>
 
-<div class="connector down x2024"></div>
-<div class="event below x2024 current">
-  <div class="icon">★</div>
-  <div class="label">Senior Data Analyst<br/>Sprinklr (2024–Present)</div>
-</div>
+  <div class="connector down x2021"></div>
+  <div class="event below x2021">
+    <div class="icon">3️⃣</div><div class="label">Data Analyst<br/>Udaan</div>
+  </div>
 
-<div class="connector up x2027"></div>
-<div class="event above x2027">
-  <div class="label">MS in Analytics<br/>(2025–2027, Expected)</div>
-  <div class="icon">🎓</div>
-</div>
+  <div class="connector up x2024"></div>
+  <div class="event above x2024 current">
+    <div class="label">Senior Data Analyst<br/>Sprinklr</div><div class="icon">★</div>
+  </div>
+
+  <div class="connector down x2027"></div>
+  <div class="event below x2027">
+    <div class="icon">🎓</div><div class="label">MS in Analytics<br/>(Expected)</div>
+  </div>
 
 </div>
-</div>
+</section>
 
-</div>
+<footer class="site-footer">
+  <div class="footer-inner">
 
-<footer>
-  <div class="footer-skills">
-    <div class="skill">SQL</div>
-    <div class="skill">Python</div>
-    <div class="skill">Power BI</div>
-    <div class="skill">Snowflake</div>
-    <div class="skill">Analytics Storytelling</div>
-    <div class="skill">KPI Design</div>
+    <div class="footer-top">
+      <strong>Alok Sharma</strong>
+      <span>Senior Data Analyst</span>
+    </div>
+
+    <div class="footer-skills-grid">
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Power BI</div>
+      <div class="skill-card">Analytics</div>
+      <div class="skill-card">Data Visualization</div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 · Built with HTML & CSS · Hosted on Netlify
+    </div>
+
   </div>
 </footer>
-
-</section>
 
 </body>
 </html>
