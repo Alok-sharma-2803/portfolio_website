@@ -174,7 +174,7 @@
       border-radius: 8px;
     }
 
-    /* MOBILE QC FIXES */
+    /* MOBILE */
     @media (max-width: 768px) {
 
       .nav-inner {
@@ -202,7 +202,6 @@
         gap: 24px;
       }
 
-      /* ↓ Reduced card padding (QC fix) */
       .project {
         padding: 20px 18px;
       }
@@ -211,7 +210,6 @@
         font-size: 22px;
       }
 
-      /* ↓ Softer stamp on mobile (QC fix) */
       .stamp {
         transform: rotate(0deg);
         opacity: 0.35;
@@ -246,13 +244,11 @@
 
 <section class="container">
 
-  <!-- FLAGSHIP PROJECT -->
+  <!-- PROJECT 1 -->
   <div class="project flagship">
     <h2>Executive Sales Performance Storyboarding</h2>
     <div class="meta">
-      Sprinklr · Power BI (<strong>Storyboarding, DAX, Guided Navigation</strong>) ·
-      SQL (<strong>Modeling, Validation</strong>) ·
-      <strong>Finance-aligned KPIs</strong> · ~50+ users
+      Sprinklr · Power BI · SQL · Finance-aligned KPIs · ~50+ users
     </div>
 
     <div class="tags">
@@ -266,26 +262,23 @@
       <div>
         <strong>Context & Problem</strong>
         <ul>
-          <li><strong>10+ Power BI dashboards</strong> with deep page hierarchies</li>
-          <li>Navigation relied on <strong>memory recall</strong> and context switching</li>
-          <li><strong>Inconsistent KPI definitions</strong> across dashboards</li>
-          <li>Leadership reviews were primarily <strong>Excel-driven</strong></li>
+          <li>10+ siloed Power BI dashboards with inconsistent definitions</li>
+          <li>Navigation relied heavily on memory recall</li>
+          <li>Leadership reviews were largely Excel-driven</li>
         </ul>
 
-        <strong>My Approach</strong>
+        <strong>Approach</strong>
         <ul>
-          <li>Consolidated reporting into a <strong>single governed executive storyboard</strong></li>
-          <li>Designed <strong>web-like top navigation</strong> aligned to executive mental models</li>
-          <li>Partnered with <strong>Finance and Sales Ops</strong> to standardize KPIs</li>
-          <li>Applied <strong>consistent page structures</strong> for fast interpretation</li>
+          <li>Consolidated reporting into a single executive storyboard</li>
+          <li>Introduced web-like guided navigation aligned to leadership workflows</li>
+          <li>Standardized KPIs in partnership with Finance and Sales Ops</li>
         </ul>
 
         <strong>Impact</strong>
         <ul>
-          <li>Established a <strong>Finance-aligned single source of truth</strong></li>
-          <li>Scaled adoption to <strong>50+ users</strong> across Sales, SDR, Marketing, Finance</li>
-          <li>Shifted leadership from <strong>Excel-led to dashboard-led meetings</strong></li>
-          <li><strong>Reduced manual reconciliation</strong> during executive reviews</li>
+          <li>Established a governed single source of truth</li>
+          <li>Drove adoption across Sales, SDR, Marketing, and Finance</li>
+          <li>Shifted leadership to dashboard-led operating reviews</li>
         </ul>
       </div>
 
@@ -320,29 +313,26 @@
       <div>
         <strong>Context</strong>
         <ul>
-          <li>Leadership needed to commit to fiscal-year revenue goals and hiring plans</li>
-          <li>Planning relied on fragmented spreadsheets with limited linkage between drivers</li>
+          <li>Leadership needed to commit to fiscal-year goals and hiring plans</li>
         </ul>
 
         <strong>Approach</strong>
         <ul>
-          <li>Modeled <strong>bottom-up SDR capacity</strong> using headcount, tenure, attrition, and seasonality</li>
-          <li>Translated <strong>$NARR goals</strong> into top-down SDR production requirements</li>
-          <li>Reconciled capacity vs targets to identify execution gaps</li>
-          <li>Developed strategies across <strong>account segmentation, hiring, and ramp assumptions</strong></li>
+          <li>Modeled bottom-up SDR capacity using headcount, tenure, attrition, and seasonality</li>
+          <li>Translated top-down $NARR targets into SDR production requirements</li>
+          <li>Identified gaps and modeled mitigation strategies</li>
         </ul>
 
         <strong>Key Decisions Enabled</strong>
         <ul>
-          <li>Recommended a <strong>~20% reduction in SDR ramp time</strong> based on historical productivity</li>
-          <li>Identified <strong>VP+ persona engagement</strong> as a key driver of win rate</li>
-          <li>Informed a persona-focused strategy that materially improved win rates in pilot regions</li>
+          <li>Recommended a ~20% reduction in SDR ramp time</li>
+          <li>Identified VP+ persona engagement as a key win-rate driver</li>
         </ul>
 
         <strong>Deliverables</strong>
         <ul>
-          <li><strong>VO goal recommendations</strong> at CMO, theater, and SDR manager levels</li>
-          <li>An <strong>Excel-based simulation</strong> to model attainment impact under different scenarios</li>
+          <li>VO goal recommendations at CMO, theater, and manager levels</li>
+          <li>Excel-based scenario simulation for attainment impact</li>
         </ul>
       </div>
 
@@ -352,6 +342,40 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project">
+    <h2>Sales Funnel Conversion & Leakage Analysis</h2>
+    <div class="meta">
+      Sales Analytics · SQL · Power BI · Funnel Modeling
+    </div>
+
+    <div class="tags">
+      <span>Funnel Analysis</span>
+      <span>Conversion Metrics</span>
+      <span>Data Quality</span>
+    </div>
+
+    <strong>Context</strong>
+    <ul>
+      <li>Leadership lacked visibility into where deals were leaking across funnel stages</li>
+      <li>Existing reports emphasized volume over conversion efficiency</li>
+    </ul>
+
+    <strong>Approach</strong>
+    <ul>
+      <li>Built a stage-normalized funnel model in SQL</li>
+      <li>Standardized rules for re-entries, stage skips, and attribution</li>
+      <li>Calculated stage-level conversion rates and time-in-stage metrics</li>
+    </ul>
+
+    <strong>Insights & Impact</strong>
+    <ul>
+      <li>Identified early-stage leakage as the primary revenue constraint</li>
+      <li>Exposed overstatement of mid-funnel health due to re-entry inflation</li>
+      <li>Informed Sales Ops focus on qualification quality and early intervention</li>
+    </ul>
   </div>
 
 </section>
