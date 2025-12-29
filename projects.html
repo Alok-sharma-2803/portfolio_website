@@ -58,8 +58,6 @@
       border-bottom: 2px solid transparent;
     }
 
-    .nav-links a:hover { color: var(--primary); }
-
     .nav-links a.active {
       color: var(--primary);
       border-bottom: 2px solid var(--primary);
@@ -95,6 +93,10 @@
       margin-bottom: 40px;
     }
 
+    .project.flagship {
+      border: 2px solid var(--primary);
+    }
+
     .project h2 {
       margin-top: 0;
       font-size: 26px;
@@ -124,18 +126,6 @@
       margin-top: 24px;
     }
 
-    .placeholder {
-      border: 2px dashed #cbd5f5;
-      background: #eef2ff;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #6366f1;
-      font-weight: 600;
-      height: 220px;
-    }
-
     ul {
       padding-left: 18px;
     }
@@ -144,35 +134,90 @@
       margin-bottom: 10px;
     }
 
-    /* ===== Mobile nav fix ONLY ===== */
+    /* IMAGE STACK */
+    .image-stack figure {
+      margin: 0 0 24px;
+    }
+
+    .image-stack img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .image-stack figcaption {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* STRATEGIC STAMP */
+    .stamp-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .stamp {
+      border: 2px dashed var(--border);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      padding: 28px 22px;
+      text-align: center;
+      transform: rotate(-6deg);
+      opacity: 0.5;
+      border-radius: 8px;
+    }
+
+    /* MOBILE QC FIXES */
     @media (max-width: 768px) {
 
-    .nav-inner {
+      .nav-inner {
         flex-direction: column;
         align-items: center;
         height: auto;
         padding: 10px 12px;
         gap: 8px;
-    }
+      }
 
-    .nav-links {
+      .nav-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
-    }
+      }
 
-    .nav-links a {
-        margin-left: 0;           /* remove desktop spacing */
-        padding-bottom: 2px;      /* tighten underline */
+      .nav-links a {
+        margin-left: 0;
         font-size: 13px;
-    }
+      }
 
-    .nav-links a.active {
-        border-bottom-width: 2px;
-    }
-    }
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
 
+      /* ↓ Reduced card padding (QC fix) */
+      .project {
+        padding: 20px 18px;
+      }
+
+      .project h2 {
+        font-size: 22px;
+      }
+
+      /* ↓ Softer stamp on mobile (QC fix) */
+      .stamp {
+        transform: rotate(0deg);
+        opacity: 0.35;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
@@ -194,129 +239,132 @@
 <header class="container">
   <h1>Projects</h1>
   <p>
-    A selection of high-impact analytics initiatives where I focused on
-    solving real business problems through data, clarity, and scalable design.
+    High-impact analytics initiatives focused on <strong>metric governance</strong>,
+    <strong>executive usability</strong>, and <strong>scalable decision-making</strong>.
   </p>
 </header>
 
 <section class="container">
 
-  <!-- PROJECT 1 -->
-  <div class="project">
-    <h2>Sales Performance Storyboarding</h2>
-    <div class="meta">Sprinklr · Power BI, SQL</div>
+  <!-- FLAGSHIP PROJECT -->
+  <div class="project flagship">
+    <h2>Executive Sales Performance Storyboarding</h2>
+    <div class="meta">
+      Sprinklr · Power BI (<strong>Storyboarding, DAX, Guided Navigation</strong>) ·
+      SQL (<strong>Modeling, Validation</strong>) ·
+      <strong>Finance-aligned KPIs</strong> · ~50+ users
+    </div>
 
     <div class="tags">
       <span>Power BI</span>
       <span>SQL</span>
-      <span>Executive Dashboards</span>
+      <span>Metric Governance</span>
+      <span>Executive Reporting</span>
     </div>
 
     <div class="grid">
       <div>
-        <strong>Problem</strong>
+        <strong>Context & Problem</strong>
         <ul>
-          <li>Sales leadership relied on 10+ fragmented dashboards</li>
-          <li>Low adoption and inconsistent KPI interpretation</li>
+          <li><strong>10+ Power BI dashboards</strong> with deep page hierarchies</li>
+          <li>Navigation relied on <strong>memory recall</strong> and context switching</li>
+          <li><strong>Inconsistent KPI definitions</strong> across dashboards</li>
+          <li>Leadership reviews were primarily <strong>Excel-driven</strong></li>
         </ul>
 
-        <strong>Approach</strong>
+        <strong>My Approach</strong>
         <ul>
-          <li>Designed a single Power BI storyboard with guided navigation</li>
-          <li>Standardized core Sales and Finance KPIs</li>
-          <li>Optimized data models for performance</li>
+          <li>Consolidated reporting into a <strong>single governed executive storyboard</strong></li>
+          <li>Designed <strong>web-like top navigation</strong> aligned to executive mental models</li>
+          <li>Partnered with <strong>Finance and Sales Ops</strong> to standardize KPIs</li>
+          <li>Applied <strong>consistent page structures</strong> for fast interpretation</li>
         </ul>
 
         <strong>Impact</strong>
         <ul>
-          <li><strong>41%</strong> increase in cross-functional dashboard adoption</li>
-          <li>Faster QBRs and planning discussions</li>
+          <li>Established a <strong>Finance-aligned single source of truth</strong></li>
+          <li>Scaled adoption to <strong>50+ users</strong> across Sales, SDR, Marketing, Finance</li>
+          <li>Shifted leadership from <strong>Excel-led to dashboard-led meetings</strong></li>
+          <li><strong>Reduced manual reconciliation</strong> during executive reviews</li>
         </ul>
       </div>
 
-      <div class="placeholder">
-        Dashboard Screenshot
+      <div class="image-stack">
+        <figure>
+          <img src="images/storyboard-overview.png" loading="lazy">
+          <figcaption><strong>Storyboard with governed structure and nav</strong></figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/storyboard-navigation.png" loading="lazy">
+          <figcaption><strong>Guided navigation for quick access to views</strong></figcaption>
+        </figure>
       </div>
     </div>
   </div>
 
   <!-- PROJECT 2 -->
   <div class="project">
-    <h2>Margin Accuracy Optimization</h2>
-    <div class="meta">Udaan · SQL, Python</div>
+    <h2>Sales Fiscal Year Capacity & Goal Planning</h2>
+    <div class="meta">
+      RevOps / Sales Strategy · SQL · Excel (Scenario Modeling)
+    </div>
 
     <div class="tags">
-      <span>SQL</span>
-      <span>Python</span>
-      <span>Finance Analytics</span>
+      <span>Capacity Planning</span>
+      <span>Revenue Modeling</span>
+      <span>Sales Strategy</span>
     </div>
 
     <div class="grid">
       <div>
-        <strong>Problem</strong>
+        <strong>Context</strong>
         <ul>
-          <li>Inconsistent margin calculations across reports</li>
-          <li>Low confidence in financial metrics</li>
+          <li>Leadership needed to commit to fiscal-year revenue goals and hiring plans</li>
+          <li>Planning relied on fragmented spreadsheets with limited linkage between drivers</li>
         </ul>
 
         <strong>Approach</strong>
         <ul>
-          <li>Performed root-cause analysis on data pipelines</li>
-          <li>Improved calculation logic and validation checks</li>
+          <li>Modeled <strong>bottom-up SDR capacity</strong> using headcount, tenure, attrition, and seasonality</li>
+          <li>Translated <strong>$NARR goals</strong> into top-down SDR production requirements</li>
+          <li>Reconciled capacity vs targets to identify execution gaps</li>
+          <li>Developed strategies across <strong>account segmentation, hiring, and ramp assumptions</strong></li>
         </ul>
 
-        <strong>Impact</strong>
+        <strong>Key Decisions Enabled</strong>
         <ul>
-          <li><strong>3.2%</strong> improvement in margin accuracy</li>
-          <li>Improved stakeholder trust in reporting</li>
+          <li>Recommended a <strong>~20% reduction in SDR ramp time</strong> based on historical productivity</li>
+          <li>Identified <strong>VP+ persona engagement</strong> as a key driver of win rate</li>
+          <li>Informed a persona-focused strategy that materially improved win rates in pilot regions</li>
+        </ul>
+
+        <strong>Deliverables</strong>
+        <ul>
+          <li><strong>VO goal recommendations</strong> at CMO, theater, and SDR manager levels</li>
+          <li>An <strong>Excel-based simulation</strong> to model attainment impact under different scenarios</li>
         </ul>
       </div>
 
-      <div class="placeholder">
-        Data Flow / Logic
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECT 3 -->
-  <div class="project">
-    <h2>Lead Conversion & Marketing Analytics</h2>
-    <div class="meta">Vedantu · SQL, Python</div>
-
-    <div class="tags">
-      <span>Clustering</span>
-      <span>Marketing Analytics</span>
-      <span>SQL</span>
-    </div>
-
-    <div class="grid">
-      <div>
-        <strong>Problem</strong>
-        <ul>
-          <li>Low lead conversion and high churn</li>
-          <li>Uniform messaging across diverse user segments</li>
-        </ul>
-
-        <strong>Approach</strong>
-        <ul>
-          <li>Applied clustering on behavioral and engagement data</li>
-          <li>Enabled targeted campaign strategies</li>
-        </ul>
-
-        <strong>Impact</strong>
-        <ul>
-          <li><strong>12%</strong> lift in lead conversion</li>
-          <li>Higher CTR and reduced uninstalls</li>
-        </ul>
-      </div>
-
-      <div class="placeholder">
-        Analysis / Charts
+      <div class="stamp-container">
+        <div class="stamp">
+          Strategic<br>Planning
+        </div>
       </div>
     </div>
   </div>
 
 </section>
+
+<script>
+  document.addEventListener("contextmenu", function (e) {
+    if (e.target.tagName === "IMG") e.preventDefault();
+  });
+
+  document.addEventListener("dragstart", function (e) {
+    if (e.target.tagName === "IMG") e.preventDefault();
+  });
+</script>
 
 </body>
 </html>
