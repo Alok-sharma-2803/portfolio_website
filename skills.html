@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills | Alok Sharma</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -33,7 +33,6 @@
       padding: 0 24px;
     }
 
-    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -58,15 +57,12 @@
       border-bottom: 2px solid transparent;
     }
 
-    .nav-links a:hover { color: var(--primary); }
-
     .nav-links a.active {
       color: var(--primary);
       border-bottom: 2px solid var(--primary);
       font-weight: 600;
     }
 
-    /* HEADER */
     header {
       padding: 72px 0 40px;
     }
@@ -82,15 +78,8 @@
       font-size: 18px;
     }
 
-    /* SKILLS */
     section {
-      padding: 32px 0;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      padding: 40px 0;
     }
 
     .skill-card {
@@ -98,12 +87,12 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
+      margin-bottom: 28px;
     }
 
     .skill-card h2 {
       margin-top: 0;
-      font-size: 22px;
-      margin-bottom: 12px;
+      font-size: 24px;
     }
 
     .skill-card p {
@@ -111,46 +100,50 @@
       margin-bottom: 16px;
     }
 
-    .pill {
+    .pills span {
       display: inline-block;
-      padding: 6px 12px;
-      border-radius: 999px;
       background: #eef2ff;
       color: #3730a3;
+      padding: 6px 12px;
+      border-radius: 999px;
       font-size: 13px;
-      margin: 6px 6px 0 0;
-      font-weight: 500;
+      margin-right: 8px;
+      margin-bottom: 10px;
     }
 
-    /* ===== Mobile nav fix ONLY ===== */
     @media (max-width: 768px) {
-
-    .nav-inner {
+      .nav-inner {
         flex-direction: column;
         align-items: center;
         height: auto;
         padding: 10px 12px;
         gap: 8px;
-    }
+      }
 
-    .nav-links {
+      .nav-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
-    }
+      }
 
-    .nav-links a {
-        margin-left: 0;           /* remove desktop spacing */
-        padding-bottom: 2px;      /* tighten underline */
+      .nav-links a {
+        margin-left: 0;
         font-size: 13px;
-    }
+      }
 
-    .nav-links a.active {
-        border-bottom-width: 2px;
-    }
-    }
+      header h1 {
+        font-size: 32px;
+      }
 
+      header p {
+        font-size: 16px;
+      }
+
+      .skill-card {
+        padding: 22px 20px;
+      }
+    }
   </style>
 </head>
 
@@ -172,83 +165,89 @@
 <header class="container">
   <h1>Skills</h1>
   <p>
-    A practical overview of the tools and capabilities I use to design,
-    build, and scale analytics solutions.
+    Capabilities I use to design <strong>trusted analytics systems</strong>,
+    support <strong>executive decision-making</strong>, and scale insights across teams.
   </p>
 </header>
 
 <section class="container">
-  <div class="skills-grid">
 
-    <div class="skill-card">
-      <h2>Data & Querying</h2>
-      <p>
-        Strong foundation in extracting, validating, and transforming data
-        across large, production-grade datasets.
-      </p>
-      <span class="pill">SQL (Advanced)</span>
-      <span class="pill">Snowflake</span>
-      <span class="pill">Data Modeling</span>
-      <span class="pill">CTEs & Window Functions</span>
+  <div class="skill-card">
+    <h2>Analytical Modeling & Exploration</h2>
+    <p>
+      Using code-driven analysis to explore performance drivers, test assumptions,
+      and support planning and prioritization decisions.
+    </p>
+    <div class="pills">
+      <span>SQL</span>
+      <span>Python</span>
+      <span>Scenario Modeling</span>
+      <span>Funnel Analysis</span>
+      <span>Capacity Modeling</span>
+      <span>Time-Series Analysis</span>
     </div>
-
-    <div class="skill-card">
-      <h2>Analytics & Programming</h2>
-      <p>
-        Applying Python for analysis, automation, and statistical exploration
-        in real business contexts.
-      </p>
-      <span class="pill">Python</span>
-      <span class="pill">Pandas</span>
-      <span class="pill">NumPy</span>
-      <span class="pill">EDA</span>
-      <span class="pill">Clustering</span>
-    </div>
-
-    <div class="skill-card">
-      <h2>BI & Visualization</h2>
-      <p>
-        Designing dashboards that guide decision-making rather than overwhelm users.
-      </p>
-      <span class="pill">Power BI</span>
-      <span class="pill">DAX</span>
-      <span class="pill">Tableau</span>
-      <span class="pill">Executive Storyboards</span>
-    </div>
-
-    <div class="skill-card">
-      <h2>Business Analytics</h2>
-      <p>
-        Translating business problems into measurable analytics frameworks.
-      </p>
-      <span class="pill">KPI Design</span>
-      <span class="pill">Root Cause Analysis</span>
-      <span class="pill">Finance Analytics</span>
-      <span class="pill">Sales & Marketing Analytics</span>
-    </div>
-
-    <div class="skill-card">
-      <h2>Data Engineering Awareness</h2>
-      <p>
-        Collaborating closely with engineering teams to ensure analytics reliability.
-      </p>
-      <span class="pill">Data Pipelines</span>
-      <span class="pill">Data Validation</span>
-      <span class="pill">Performance Optimization</span>
-    </div>
-
-    <div class="skill-card">
-      <h2>Ways of Working</h2>
-      <p>
-        How I approach analytics problems and collaborate with stakeholders.
-      </p>
-      <span class="pill">Stakeholder Management</span>
-      <span class="pill">Analytics Storyboarding</span>
-      <span class="pill">Documentation</span>
-      <span class="pill">Mentoring</span>
-    </div>
-
   </div>
+
+  <div class="skill-card">
+    <h2>Business Intelligence & Storytelling</h2>
+    <p>
+      Designing intuitive reporting layers that translate complex data into
+      clear, actionable narratives for leadership and operating teams.
+    </p>
+    <div class="pills">
+      <span>Power BI</span>
+      <span>Executive Dashboards</span>
+      <span>Metric Design</span>
+      <span>Guided Navigation</span>
+      <span>Self-Service Analytics</span>
+    </div>
+  </div>
+
+  <div class="skill-card">
+    <h2>Metric Governance & Decision Enablement</h2>
+    <p>
+      Establishing consistent definitions, ownership, and usage patterns so
+      metrics remain trustworthy and decision-ready across the organization.
+    </p>
+    <div class="pills">
+      <span>KPI Standardization</span>
+      <span>Finance Alignment</span>
+      <span>Revenue Metrics</span>
+      <span>Documentation</span>
+      <span>Operating Reviews</span>
+    </div>
+  </div>
+
+  <div class="skill-card">
+    <h2>Analytics Reliability & Data Foundations</h2>
+    <p>
+      Partnering with data engineering to ensure analytical outputs are
+      performant, maintainable, and production-ready.
+    </p>
+    <div class="pills">
+      <span>Data Modeling</span>
+      <span>Query Optimization</span>
+      <span>Semantic Layers</span>
+      <span>Data Validation</span>
+      <span>Warehouse Concepts</span>
+    </div>
+  </div>
+
+  <div class="skill-card">
+    <h2>Execution & Ways of Working</h2>
+    <p>
+      Structuring analytics work for repeatability, clarity, and impact
+      in fast-moving, cross-functional environments.
+    </p>
+    <div class="pills">
+      <span>Stakeholder Alignment</span>
+      <span>Problem Framing</span>
+      <span>Tradeoff Evaluation</span>
+      <span>Documentation for Scale</span>
+      <span>Iterative Delivery</span>
+    </div>
+  </div>
+
 </section>
 
 </body>

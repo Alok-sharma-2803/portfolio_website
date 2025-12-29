@@ -25,10 +25,7 @@
       line-height: 1.7;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .container {
       max-width: 900px;
@@ -36,7 +33,6 @@
       padding: 0 24px;
     }
 
-    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -61,47 +57,42 @@
       border-bottom: 2px solid transparent;
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
     .nav-links a.active {
       color: var(--primary);
       border-bottom: 2px solid var(--primary);
       font-weight: 600;
     }
 
-    /* HEADER */
     header {
       padding: 72px 0 40px;
     }
 
     header h1 {
       font-size: 40px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     header p {
-      max-width: 720px;
-      color: var(--muted);
       font-size: 18px;
+      color: var(--muted);
+      max-width: 720px;
     }
 
     section {
       padding: 40px 0;
     }
 
-    h2 {
-      font-size: 26px;
-      margin-bottom: 16px;
-    }
-
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 24px;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 26px;
     }
 
     ul {
@@ -109,38 +100,42 @@
     }
 
     ul li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
-    /* ===== Mobile nav fix ONLY ===== */
-  @media (max-width: 768px) {
+    @media (max-width: 768px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 12px;
+        gap: 8px;
+      }
 
-    .nav-inner {
-      flex-direction: column;
-      align-items: center;
-      height: auto;
-      padding: 10px 12px;
-      gap: 8px;
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        font-size: 13px;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .card {
+        padding: 22px 20px;
+      }
     }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .nav-links a {
-      margin-left: 0;           /* remove desktop spacing */
-      padding-bottom: 2px;      /* tighten underline */
-      font-size: 13px;
-    }
-
-    .nav-links a.active {
-      border-bottom-width: 2px;
-    }
-  }
-
   </style>
 </head>
 
@@ -162,77 +157,65 @@
 <header class="container">
   <h1>About Me</h1>
   <p>
-    Senior Data / BI Analyst with 6+ years of experience building analytics systems
-    that improve clarity, speed, and trust in business decision-making.
+    I design analytics systems that help leaders make better decisions — by combining
+    <strong>metric governance</strong>, <strong>clear storytelling</strong>, and
+    <strong>business-first thinking</strong>.
   </p>
 </header>
 
 <section class="container">
-  <h2>Professional Overview</h2>
+
   <div class="card">
+    <h2>Professional Overview</h2>
     <p>
-      I work at the intersection of <strong>business strategy and analytics execution</strong>,
-      helping teams move from fragmented reporting to cohesive, insight-driven decision frameworks.
+      I’m an analytics professional with 6+ years of experience supporting revenue, sales,
+      and go-to-market teams in high-growth environments. My work sits at the intersection of
+      <strong>executive reporting</strong>, <strong>KPI standardization</strong>, and
+      <strong>decision enablement</strong>.
     </p>
     <p>
-      My experience spans <strong>Finance, Sales, and Marketing analytics</strong>,
-      with a strong focus on analytics storyboarding, KPI diagnostics,
-      and scalable reporting design.
+      I focus on solving ambiguous business problems — turning fragmented data and
+      inconsistent metrics into trusted systems leaders can rely on for planning,
+      performance management, and operating reviews.
     </p>
   </div>
-</section>
-
-<section class="container">
-  <h2>Key Projects & Impact</h2>
 
   <div class="card">
-    <strong>Sales Performance Storyboarding (Power BI)</strong>
+    <h2>What I Typically Own</h2>
     <ul>
-      <li>Unified 10+ dashboards into a single executive-ready Power BI storyboard</li>
-      <li>Improved cross-functional adoption by <strong>41%</strong></li>
-      <li>Standardized KPIs across Sales and Finance</li>
+      <li>Defining and governing core business metrics in partnership with Finance and Ops</li>
+      <li>Designing executive dashboards that replace ad-hoc and spreadsheet-driven reporting</li>
+      <li>Building analytical models to support capacity planning, goal-setting, and prioritization</li>
+      <li>Translating leadership questions into structured analytical frameworks</li>
+      <li>Creating reusable reporting patterns that scale across teams</li>
     </ul>
   </div>
 
   <div class="card">
-    <strong>Margin Accuracy Optimization (SQL, Python)</strong>
+    <h2>How I Work</h2>
     <ul>
-      <li>Performed root-cause analysis on margin inconsistencies</li>
-      <li>Improved reporting accuracy by <strong>3.2%</strong></li>
-      <li>Increased stakeholder trust in financial metrics</li>
+      <li>Start with decision context, not visuals or tools</li>
+      <li>Optimize for clarity, consistency, and long-term usability</li>
+      <li>Partner closely with stakeholders to align on definitions and tradeoffs</li>
+      <li>Bias toward simple, explainable models over fragile complexity</li>
+      <li>Design analytics that enable action — not just observation</li>
     </ul>
   </div>
 
   <div class="card">
-    <strong>Marketing & Lead Conversion Analytics</strong>
+    <h2>Education</h2>
     <ul>
-      <li>Applied cluster analysis to segment leads by behavior</li>
-      <li>Improved conversion rates by <strong>12%</strong></li>
-      <li>Optimized CTR while reducing churn</li>
+      <li>
+        <strong>Master of Science in Analytics (OMSA)</strong><br>
+                Georgia Institute of Technology · <em>Expected 2027</em>
+      </li>
+      <li>
+        <strong>Electronics & Telecommunication Engineering (B.Tech)</strong><br>
+        KIIT University, 2017
+      </li>
     </ul>
   </div>
-</section>
 
-<section class="container">
-  <h2>Education</h2>
-  <div class="card">
-    <ul>
-      <li><strong>MS in Analytics</strong>, Georgia Institute of Technology (OMSA) — Expected 2027</li>
-      <li><strong>B.Tech</strong>, Electronics & Telecommunication, KIIT University</li>
-    </ul>
-  </div>
-</section>
-
-<section class="container">
-  <h2>How I Work</h2>
-  <div class="card">
-    <ul>
-      <li>Start with the business problem, not the dashboard</li>
-      <li>Design metrics executives can trust</li>
-      <li>Build analytics systems that scale</li>
-      <li>Communicate insights clearly and visually</li>
-    </ul>
-  </div>
 </section>
 
 </body>
